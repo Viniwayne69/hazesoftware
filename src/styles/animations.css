@@ -1,0 +1,262 @@
+@keyframes objectFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(0.8deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .header__inner {
+    padding: 0 28px;
+  }
+
+  .nav {
+    gap: 24px;
+  }
+
+  .hero__grid,
+  .philosophy,
+  .process,
+  .side-section,
+  .cta {
+    padding-left: 46px;
+    padding-right: 46px;
+  }
+
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .solution-grid,
+  .project-list,
+  .value-grid,
+  .numbers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    top: 8px;
+  }
+
+  .header__inner {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    min-height: 68px;
+  }
+
+  .header__cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: grid;
+    gap: 7px;
+    width: 46px;
+    height: 46px;
+    place-content: center;
+    border-radius: 999px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
+    box-shadow: var(--shadow-inset);
+  }
+
+  .menu-toggle span {
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--text);
+    transition: transform var(--transition), opacity var(--transition);
+  }
+
+  .menu-toggle--open span:first-child {
+    transform: translateY(4.5px) rotate(45deg);
+  }
+
+  .menu-toggle--open span:last-child {
+    transform: translateY(-4.5px) rotate(-45deg);
+  }
+
+  .nav {
+    position: fixed;
+    top: 76px;
+    left: 8px;
+    right: 8px;
+    display: grid;
+    gap: 4px;
+    justify-content: stretch;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: rgba(12, 14, 18, 0.96);
+    box-shadow: var(--shadow-out);
+    opacity: 0;
+    transform: translateY(-12px);
+    pointer-events: none;
+    backdrop-filter: blur(20px);
+  }
+
+  .nav--open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav a {
+    padding: 15px 16px;
+    border-radius: 14px;
+  }
+
+  .nav a:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .hero {
+    min-height: calc(100svh - 16px);
+  }
+
+  .hero__grid,
+  .philosophy,
+  .cta {
+    grid-template-columns: 1fr;
+    padding: 52px 28px;
+  }
+
+  .hero__grid {
+    min-height: calc(100svh - 16px);
+    align-content: center;
+    padding-top: 108px;
+    padding-bottom: 64px;
+  }
+
+  h1 {
+    font-size: clamp(3.4rem, 13vw, 5.7rem);
+  }
+
+  .hero__content h1 {
+    font-size: clamp(3.8rem, 13.6vw, 6rem);
+    line-height: 0.98;
+  }
+
+  h2 {
+    font-size: clamp(2.25rem, 9vw, 4rem);
+  }
+
+  .side-section,
+  .process {
+    padding: 52px 28px;
+  }
+
+  .solution-grid,
+  .project-list,
+  .value-grid,
+  .numbers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process__line {
+    grid-template-columns: 1fr;
+    margin-top: 44px;
+  }
+
+  .process__line::before {
+    left: 33px;
+    right: auto;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent);
+  }
+
+  .process-step {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    column-gap: 20px;
+  }
+
+  .process-step__icon {
+    grid-row: span 4;
+    margin-bottom: 0;
+  }
+
+  .section-topline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    padding: 40px 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(100% - 24px, var(--container));
+  }
+
+  .logo {
+    font-size: 1.35rem;
+  }
+
+  .hero__content h1 {
+    font-size: clamp(3.15rem, 13.4vw, 4.75rem);
+  }
+
+  .hero__grid {
+    padding-top: 104px;
+    padding-bottom: 58px;
+  }
+
+  .hero__content p {
+    margin-top: 28px;
+    font-size: 1.08rem;
+  }
+
+  .hero__actions {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .project-card__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card button {
+    width: 100%;
+  }
+
+  .footer__newsletter form {
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+    padding: 12px;
+  }
+
+  .footer__newsletter input {
+    min-height: 42px;
+  }
+
+  .footer__newsletter button {
+    width: 100%;
+    height: 46px;
+  }
+}
