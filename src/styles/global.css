@@ -353,6 +353,40 @@ p {
     inset 1px 1px 1px rgba(255, 255, 255, 0.1);
 }
 
+.site-stack > .panel:nth-child(odd):not(.hero) .card {
+  border-color: rgba(124, 92, 255, 0.2);
+  background:
+    radial-gradient(circle at 16% 10%, rgba(255, 255, 255, 0.13), transparent 7rem),
+    radial-gradient(circle at 82% 0%, rgba(124, 92, 255, 0.18), transparent 8rem),
+    linear-gradient(145deg, rgba(36, 39, 49, 0.92), rgba(13, 15, 21, 0.96));
+  box-shadow:
+    14px 18px 42px rgba(0, 0, 0, 0.38),
+    0 0 32px rgba(124, 92, 255, 0.08),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.12);
+}
+
+.site-stack > .panel:nth-child(odd):not(.hero) .card:hover {
+  border-color: rgba(154, 126, 255, 0.48);
+  box-shadow:
+    20px 28px 62px rgba(0, 0, 0, 0.48),
+    0 0 42px rgba(124, 92, 255, 0.18),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.16);
+}
+
+.site-stack > .panel:nth-child(odd):not(.hero) .icon-badge,
+.site-stack > .panel:nth-child(odd):not(.hero) .project-card button {
+  border-color: rgba(154, 126, 255, 0.22);
+  color: #9f82ff;
+  background:
+    radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.22), transparent 32%),
+    radial-gradient(circle at 64% 72%, rgba(124, 92, 255, 0.28), transparent 46%),
+    linear-gradient(145deg, rgba(38, 41, 52, 0.98), rgba(10, 12, 17, 0.98));
+  box-shadow:
+    12px 15px 32px rgba(0, 0, 0, 0.45),
+    0 0 24px rgba(124, 92, 255, 0.18),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.14);
+}
+
 .site-stack {
   display: grid;
   gap: var(--space-section);
@@ -467,11 +501,46 @@ p {
   right: 5%;
   top: 33px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  background: linear-gradient(90deg, transparent, rgba(124, 92, 255, 0.42), rgba(255, 255, 255, 0.18), rgba(124, 92, 255, 0.38), transparent);
+  box-shadow: 0 0 22px rgba(124, 92, 255, 0.16);
 }
 
 .process-step {
   position: relative;
+  isolation: isolate;
+  border-radius: 24px;
+  transition: transform var(--transition);
+}
+
+.process-step::before {
+  content: "";
+  position: absolute;
+  inset: -18px -16px -20px;
+  z-index: -1;
+  border: 1px solid rgba(124, 92, 255, 0.12);
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 28% 0%, rgba(255, 255, 255, 0.07), transparent 7rem),
+    radial-gradient(circle at 74% 22%, rgba(124, 92, 255, 0.1), transparent 8rem),
+    linear-gradient(145deg, rgba(24, 27, 35, 0.38), rgba(9, 11, 15, 0.12));
+  box-shadow:
+    12px 16px 36px rgba(0, 0, 0, 0.18),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.055);
+  opacity: 0.78;
+  transition: opacity var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+}
+
+.process-step:hover::before {
+  border-color: rgba(154, 126, 255, 0.34);
+  box-shadow:
+    16px 22px 48px rgba(0, 0, 0, 0.32),
+    0 0 34px rgba(124, 92, 255, 0.14),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.09);
+  opacity: 1;
 }
 
 .process-step__icon {
@@ -483,16 +552,20 @@ p {
   height: 68px;
   margin-bottom: 32px;
   border-radius: 999px;
-  color: var(--purple);
+  color: #9f82ff;
   background:
-    radial-gradient(circle at 28% 20%, rgba(255, 255, 255, 0.16), transparent 34%),
-    linear-gradient(145deg, rgba(35, 38, 47, 0.94), rgba(9, 11, 15, 0.98));
-  box-shadow: 12px 16px 34px rgba(0, 0, 0, 0.4), var(--shadow-inset);
+    radial-gradient(circle at 28% 20%, rgba(255, 255, 255, 0.24), transparent 34%),
+    radial-gradient(circle at 68% 78%, rgba(124, 92, 255, 0.34), transparent 44%),
+    linear-gradient(145deg, rgba(38, 41, 52, 0.98), rgba(9, 11, 15, 0.98));
+  box-shadow:
+    12px 16px 34px rgba(0, 0, 0, 0.46),
+    0 0 26px rgba(124, 92, 255, 0.18),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.13);
   transition: var(--transition);
 }
 
 .process-step span {
-  color: var(--text-muted);
+  color: #aeb4c3;
   font-size: 0.82rem;
   font-weight: 600;
 }
@@ -503,7 +576,7 @@ p {
 
 .process-step p {
   margin-top: 12px;
-  color: var(--text-muted);
+  color: #a0a6b4;
   font-size: 0.92rem;
   line-height: 1.55;
 }
