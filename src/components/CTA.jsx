@@ -19,7 +19,7 @@ export default function CTA() {
           Conte sobre seu projeto e descubra como podemos transformar sua ideia em um sistema
           poderoso.
         </p>
-        <Button href="mailto:contato@haze.com.br">Falar com especialista</Button>
+        <Button href="https://wa.me/5516988589448">Falar com especialista</Button>
       </div>
     </motion.section>
   );

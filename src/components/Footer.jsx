@@ -27,13 +27,13 @@ export default function Footer() {
           </a>
           <p>Software sob medida para empresas que querem crescer com clareza.</p>
           <div className="footer__social">
-            <a href="https://instagram.com" aria-label="Instagram">
+            <a href="https://www.instagram.com/haze.software/" aria-label="Instagram">
               <Instagram size={18} />
             </a>
             <a href="https://linkedin.com" aria-label="LinkedIn">
               <Linkedin size={18} />
             </a>
-            <a href="https://wa.me/5500000000000" aria-label="WhatsApp">
+            <a href="https://wa.me/5516988589448" aria-label="WhatsApp">
               <MessageCircle size={18} />
             </a>
           </div>
@@ -52,7 +52,7 @@ export default function Footer() {
 
         <div className="footer__column">
           <h3>Contato</h3>
-          <a href="mailto:contato@haze.com.br">contato@haze.com.br</a>
+          <a href="mailto:sejahaze@gmail.com">sejahaze@gmail.com</a>
           <span>Recife, PE</span>
         </div>
 
