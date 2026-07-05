@@ -9,7 +9,7 @@ const projects = [
     icon: CalendarDays,
     category: 'Agendamento',
     title: 'Agenda Explosiva',
-    text: 'Sistema de agendamento para profissionais da estética.'
+    text: 'Sistema de agendamento profissional para os seus clientes.'
   },
   {
     icon: BarChart3,
