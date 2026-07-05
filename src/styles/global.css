@@ -359,6 +359,12 @@ p {
   transition: color var(--transition), box-shadow var(--transition), transform var(--transition);
 }
 
+.icon-badge svg {
+  display: block;
+  width: 23px;
+  height: 23px;
+}
+
 .card:hover .icon-badge,
 .process-step:hover .process-step__icon {
   color: #b5a3ff;
@@ -1014,7 +1020,7 @@ p {
   padding: 30px;
 }
 
-.partner-card span {
+.partner-card span:not(.icon-badge) {
   display: block;
   margin-top: 28px;
   color: #a58dff;
@@ -1091,8 +1097,11 @@ p {
 }
 
 .partner-flow-grid .partner-card .icon-badge {
+  display: inline-grid;
+  place-items: center;
   color: #7b4dff;
   border-color: rgba(255, 255, 255, 0.42);
+  border-radius: 999px;
   background:
     radial-gradient(circle at 28% 20%, rgba(255, 255, 255, 0.98), transparent 34%),
     linear-gradient(145deg, #ffffff, #f2edff);
@@ -1101,7 +1110,7 @@ p {
     inset 1px 1px 1px rgba(255, 255, 255, 0.8);
 }
 
-.partner-flow-grid .partner-card span,
+.partner-flow-grid .partner-card span:not(.icon-badge),
 .partner-flow-grid .partner-card h3 {
   color: white;
 }
