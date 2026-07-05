@@ -10,6 +10,7 @@ import Numbers from './components/Numbers.jsx';
 import CTA from './components/CTA.jsx';
 import Footer from './components/Footer.jsx';
 import PartnersPage from './pages/PartnersPage.jsx';
+import SolutionsPage from './pages/SolutionsPage.jsx';
 
 const partnerNavItems = [
   ['Início', '#inicio'],
@@ -20,6 +21,13 @@ const partnerNavItems = [
   ['Contato', '#contato']
 ];
 
+const solutionsNavItems = [
+  ['Serviços', '#servicos'],
+  ['Sob medida', '#sob-medida'],
+  ['Contato', '#contato'],
+  ['Voltar ao site', '/']
+];
+
 function getRouteKey() {
   return `${window.location.pathname}${window.location.hash}`;
 }
@@ -27,6 +35,11 @@ function getRouteKey() {
 function isPartnersPage(routeKey) {
   const path = window.location.pathname.replace(/\/$/, '');
   return path.endsWith('/parceiros') || path.endsWith('/parceiros.html') || routeKey.includes('#parceiros');
+}
+
+function isSolutionsPage() {
+  const path = window.location.pathname.replace(/\/$/, '');
+  return path.endsWith('/solucoes') || path.endsWith('/solucoes.html');
 }
 
 export default function App() {
@@ -56,6 +69,21 @@ export default function App() {
           logoHref="/"
         />
         <PartnersPage />
+        <Footer />
+      </>
+    );
+  }
+
+  if (isSolutionsPage()) {
+    return (
+      <>
+        <Header
+          items={solutionsNavItems}
+          ctaText="Falar com a Haze"
+          ctaHref="https://wa.me/5516988589448?text=Quero%20conversar%20sobre%20as%20solucoes%20da%20Haze"
+          logoHref="/"
+        />
+        <SolutionsPage />
         <Footer />
       </>
     );

@@ -10,10 +10,10 @@ const footerLinks = {
     ['Contato', '#contato']
   ],
   Soluções: [
-    ['Sistemas Web', '#solucoes'],
-    ['SaaS Personalizado', '#solucoes'],
-    ['Automações', '#solucoes'],
-    ['CRM e Agendamento', '#solucoes']
+    ['Haze Link', '/solucoes'],
+    ['Haze Page', '/solucoes'],
+    ['Haze Agenda', '/solucoes'],
+    ['Haze CRM', '/solucoes']
   ]
 };
 

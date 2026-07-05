@@ -1,4 +1,4 @@
-import { ArrowRight, Boxes, CalendarRange, Workflow, Zap } from 'lucide-react';
+import { ArrowRight, CalendarRange, FileText, Link2, UsersRound } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Card from './ui/Card.jsx';
 import IconBadge from './ui/IconBadge.jsx';
@@ -6,24 +6,24 @@ import SectionLabel from './ui/SectionLabel.jsx';
 
 const solutions = [
   {
-    icon: Boxes,
-    title: 'Sistemas Web',
-    text: 'Soluções completas para gestão, operação, atendimento e vendas.'
+    icon: Link2,
+    title: 'Haze Link',
+    text: 'Página comercial para Instagram e WhatsApp, criada para apresentar sua marca com mais profissionalismo.'
   },
   {
-    icon: Zap,
-    title: 'SaaS Personalizado',
-    text: 'Plataformas escaláveis para transformar ideias em produtos digitais.'
-  },
-  {
-    icon: Workflow,
-    title: 'Automações',
-    text: 'Reduza tarefas manuais e aumente a produtividade com inteligência.'
+    icon: FileText,
+    title: 'Haze Page',
+    text: 'Página de vendas para divulgar ofertas, serviços, produtos, campanhas ou matrículas.'
   },
   {
     icon: CalendarRange,
-    title: 'CRM e Agendamento',
-    text: 'Organize clientes, funil de vendas e agendamentos em um só lugar.'
+    title: 'Haze Agenda',
+    text: 'Sistema de agendamento para organizar horários, clientes, serviços e atendimentos.'
+  },
+  {
+    icon: UsersRound,
+    title: 'Haze CRM',
+    text: 'Sistema comercial para organizar leads, negociações e oportunidades de venda.'
   }
 ];
 
@@ -37,8 +37,15 @@ export default function Solutions() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
     >
-      <SectionLabel>O que fazemos</SectionLabel>
-      <h2>Soluções digitais que simplificam e potencializam.</h2>
+      <div className="section-topline">
+        <div>
+          <SectionLabel>O que fazemos</SectionLabel>
+          <h2>Soluções digitais que simplificam e potencializam.</h2>
+        </div>
+        <a href="/solucoes" className="text-link">
+          Ver todas as soluções <ArrowRight size={15} />
+        </a>
+      </div>
       <div className="solution-grid">
         {solutions.map((solution, index) => (
           <Card className="solution-card" key={solution.title}>
