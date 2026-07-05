@@ -8,8 +8,8 @@
       content="Haze Software cria sistemas web, SaaS personalizados, automações, CRM e agendamento para empresas que querem crescer com clareza."
     />
     <title>Haze Software | Software que cresce com a sua empresa</title>
-    <link rel="icon" type="image/png" sizes="512x512" href="./public/favicon.png?v=2" />
-    <link rel="apple-touch-icon" href="./public/favicon.png?v=2" />
+    <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="./favicon.png?v=2" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,23 +24,10 @@
         background: #0b0d10;
       }
     </style>
-    <script>
-      window.__USING_DEV_SERVER__ =
-        window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-
-      if (!window.__USING_DEV_SERVER__) {
-        document.write('<link rel="stylesheet" href="./dist/assets/index.css">');
-      }
-    </script>
+    <script type="module" crossorigin src="./assets/index.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index.css">
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      if (window.__USING_DEV_SERVER__) {
-        document.write('<script type="module" src="/src/main.jsx"><\/script>');
-      } else {
-        document.write('<script src="./dist/assets/index.js"><\/script>');
-      }
-    </script>
   </body>
 </html>

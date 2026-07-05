@@ -25,9 +25,10 @@
       }
     </style>
     <script>
-      window.__OPENING_AS_FILE__ = window.location.protocol === 'file:';
+      window.__USING_DEV_SERVER__ =
+        window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
-      if (window.__OPENING_AS_FILE__) {
+      if (!window.__USING_DEV_SERVER__) {
         document.write('<link rel="stylesheet" href="./dist/assets/index.css">');
       }
     </script>
@@ -35,10 +36,10 @@
   <body>
     <div id="root"></div>
     <script>
-      if (window.__OPENING_AS_FILE__) {
-        document.write('<script src="./dist/assets/index.js"><\/script>');
-      } else {
+      if (window.__USING_DEV_SERVER__) {
         document.write('<script type="module" src="/src/main.jsx"><\/script>');
+      } else {
+        document.write('<script src="./dist/assets/index.js"><\/script>');
       }
     </script>
   </body>
