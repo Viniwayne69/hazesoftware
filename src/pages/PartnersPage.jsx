@@ -134,8 +134,8 @@ export default function PartnersPage() {
           </motion.p>
           <div className="partners-hero__actions">
             <Button href={whatsappLink}>Quero ser parceiro</Button>
-            <Button href="#como-funciona" variant="secondary">
-              Ver como funciona
+            <Button href="/" variant="secondary">
+              Voltar ao site
             </Button>
           </div>
           <p className="partners-hero__note">
