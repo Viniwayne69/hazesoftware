@@ -1497,10 +1497,73 @@ p {
   .numbers-grid,
   .partner-flow-grid,
   .partner-benefits-grid,
+  .partners-copy,
   .partners-services-grid,
   .partners-profile-list,
   .partners-includes {
     grid-template-columns: 1fr;
+  }
+
+  .partners-page .section-label {
+    justify-content: flex-start;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+  }
+
+  .partners-hero {
+    min-height: auto;
+    padding-top: 118px;
+    padding-bottom: 64px;
+  }
+
+  .partners-hero h1 {
+    max-width: 620px;
+    font-size: clamp(3.15rem, 12.5vw, 5.25rem);
+    line-height: 0.96;
+    letter-spacing: -0.06em;
+    text-wrap: balance;
+  }
+
+  .partners-hero p {
+    max-width: 560px;
+    font-size: clamp(1rem, 4vw, 1.18rem);
+    line-height: 1.58;
+  }
+
+  .partners-intro h2,
+  .partners-revenue h2,
+  .partners-profiles h2,
+  .partners-offer h2,
+  .partners-final-cta h2,
+  .partners-faq h2,
+  .partners-page .side-section h2 {
+    max-width: 660px;
+    font-size: clamp(2.4rem, 9.8vw, 4.05rem);
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+    text-wrap: balance;
+  }
+
+  .partners-copy {
+    gap: 14px;
+    max-width: 100%;
+  }
+
+  .partners-copy p {
+    min-height: auto;
+    padding: 22px;
+    font-size: 1rem;
+    line-height: 1.58;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .partner-card p,
+  .partner-service p,
+  .partners-page p,
+  .faq-list p {
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .process__line {
@@ -1536,6 +1599,85 @@ p {
   .partners-hero p,
   .hero__content p {
     font-size: 1.05rem;
+  }
+
+  .partners-page {
+    --space-section: 4px;
+  }
+
+  .partners-page .panel {
+    border-radius: 28px;
+  }
+
+  .partners-hero {
+    padding: 104px 18px 52px;
+    text-align: left;
+  }
+
+  .partners-hero__content {
+    width: 100%;
+  }
+
+  .partners-hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: clamp(2.85rem, 12.8vw, 4.25rem);
+    line-height: 0.98;
+    text-align: left;
+  }
+
+  .partners-hero p {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .partners-hero__actions {
+    justify-content: stretch;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .partners-hero__note {
+    display: none;
+  }
+
+  .partners-intro,
+  .partners-revenue,
+  .partners-profiles,
+  .partners-offer,
+  .partners-final-cta,
+  .partners-page .side-section,
+  .partners-page .process {
+    padding: 58px 18px;
+  }
+
+  .partners-intro h2,
+  .partners-revenue h2,
+  .partners-profiles h2,
+  .partners-offer h2,
+  .partners-final-cta h2,
+  .partners-faq h2,
+  .partners-page .side-section h2 {
+    font-size: clamp(2.25rem, 10.8vw, 3.35rem);
+    line-height: 1.04;
+  }
+
+  .partners-copy p {
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .partners-services-grid,
+  .partner-flow-grid,
+  .partner-benefits-grid {
+    gap: 14px;
+    margin-top: 30px;
   }
 
   .partner-card > div,
