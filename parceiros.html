@@ -27,9 +27,12 @@
     <script>
       window.__USING_DEV_SERVER__ =
         window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      window.__ASSET_BASE__ = window.location.pathname.includes('/dist/')
+        ? './assets'
+        : './dist/assets';
 
       if (!window.__USING_DEV_SERVER__) {
-        document.write('<link rel="stylesheet" href="./dist/assets/index.css">');
+        document.write('<link rel="stylesheet" href="' + window.__ASSET_BASE__ + '/index.css">');
       }
     </script>
   </head>
@@ -39,7 +42,7 @@
       if (window.__USING_DEV_SERVER__) {
         document.write('<script type="module" src="/src/main.jsx"><\/script>');
       } else {
-        document.write('<script src="./dist/assets/index.js"><\/script>');
+        document.write('<script src="' + window.__ASSET_BASE__ + '/index.js"><\/script>');
       }
     </script>
   </body>

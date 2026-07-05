@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import Philosophy from './components/Philosophy.jsx';
@@ -19,13 +20,33 @@ const partnerNavItems = [
   ['Contato', '#contato']
 ];
 
-function isPartnersPage() {
+function getRouteKey() {
+  return `${window.location.pathname}${window.location.hash}`;
+}
+
+function isPartnersPage(routeKey) {
   const path = window.location.pathname.replace(/\/$/, '');
-  return path.endsWith('/parceiros') || path.endsWith('/parceiros.html') || window.location.hash === '#parceiros';
+  return path.endsWith('/parceiros') || path.endsWith('/parceiros.html') || routeKey.includes('#parceiros');
 }
 
 export default function App() {
-  if (isPartnersPage()) {
+  const [routeKey, setRouteKey] = useState(getRouteKey);
+
+  useEffect(() => {
+    function updateRoute() {
+      setRouteKey(getRouteKey());
+      window.scrollTo(0, 0);
+    }
+
+    window.addEventListener('hashchange', updateRoute);
+    window.addEventListener('popstate', updateRoute);
+    return () => {
+      window.removeEventListener('hashchange', updateRoute);
+      window.removeEventListener('popstate', updateRoute);
+    };
+  }, []);
+
+  if (isPartnersPage(routeKey)) {
     return (
       <>
         <Header

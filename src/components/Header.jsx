@@ -8,7 +8,7 @@ const navItems = [
   ['Processo', '#processo'],
   ['Sobre', '#sobre'],
   ['Contato', '#contato'],
-  ['Seja nosso parceiro', './parceiros.html']
+  ['Seja nosso parceiro', './index.html#parceiros']
 ];
 
 export default function Header({
