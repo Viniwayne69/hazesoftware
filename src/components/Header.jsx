@@ -7,10 +7,16 @@ const navItems = [
   ['Projetos', '#projetos'],
   ['Processo', '#processo'],
   ['Sobre', '#sobre'],
-  ['Contato', '#contato']
+  ['Contato', '#contato'],
+  ['Seja nosso parceiro', './parceiros.html']
 ];
 
-export default function Header() {
+export default function Header({
+  items = navItems,
+  ctaText = 'Fale conosco',
+  ctaHref = '#contato',
+  logoHref = '#inicio'
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeMenu() {
@@ -20,12 +26,12 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header__inner">
-        <a className="logo" href="#inicio" onClick={closeMenu} aria-label="Haze Software, início">
+        <a className="logo" href={logoHref} onClick={closeMenu} aria-label="Haze Software, início">
           HAZE
         </a>
 
         <nav className={`nav ${isOpen ? 'nav--open' : ''}`} aria-label="Navegação principal">
-          {navItems.map(([label, href]) => (
+          {items.map(([label, href]) => (
             <a key={href} href={href} onClick={closeMenu}>
               {label}
             </a>
@@ -33,8 +39,8 @@ export default function Header() {
         </nav>
 
         <div className="header__cta">
-          <Button href="#contato" variant="ghost">
-            Fale conosco
+          <Button href={ctaHref} variant="ghost">
+            {ctaText}
           </Button>
         </div>
 

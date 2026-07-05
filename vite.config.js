@@ -5,7 +5,10 @@ export default defineConfig({
   base: './',
   build: {
     rollupOptions: {
-      input: 'index.dev.html',
+      input: {
+        index: 'index.dev.html',
+        parceiros: 'parceiros.html'
+      },
       output: {
         entryFileNames: 'assets/index.js',
         chunkFileNames: 'assets/[name].js',
