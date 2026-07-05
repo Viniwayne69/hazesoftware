@@ -53,7 +53,7 @@ export default function App() {
           items={partnerNavItems}
           ctaText="Quero ser parceiro"
           ctaHref="https://wa.me/5516988589448?text=Quero%20conversar%20sobre%20a%20parceria%20com%20a%20Haze"
-          logoHref="./"
+          logoHref="/"
         />
         <PartnersPage />
         <Footer />

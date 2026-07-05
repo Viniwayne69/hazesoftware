@@ -6,16 +6,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        index: 'index.dev.html',
+        index: 'index.html',
         parceiros: 'parceiros.html'
-      },
-      output: {
-        entryFileNames: 'assets/index.js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: assetInfo => {
-          if (assetInfo.name?.endsWith('.css')) return 'assets/index.css';
-          return 'assets/[name][extname]';
-        }
       }
     }
   },
