@@ -9,8 +9,8 @@ import {
   Layers3,
   MessagesSquare,
   Rocket,
+  Search,
   Share2,
-  Sparkles,
   Store,
   UsersRound,
   Workflow
@@ -26,7 +26,7 @@ const whatsappLink =
 
 const partnerFlow = [
   {
-    icon: Sparkles,
+    icon: Search,
     title: 'Você identifica a oportunidade',
     text: 'Sua agência percebe que um cliente precisa de uma página comercial, site, sistema de agendamento, formulário, cardápio digital, CRM ou painel de gestão.'
   },
